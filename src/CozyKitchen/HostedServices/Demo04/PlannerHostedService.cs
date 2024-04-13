@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Graph.Beta;
 using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.Planning;
 using Microsoft.SemanticKernel.Planning.Handlebars;
 
 namespace CozyKitchen.HostedServices;
@@ -64,12 +65,12 @@ public class PlannerHostedService : IHostedService
                 Console.WriteLine("Plan results:\n");
                 Console.WriteLine(result);
             }
-            catch (KernelException e)
+            catch (PlanCreationException e)
             {
-                // Create plan error: Not possible to create plan for goal with available functions.
-                // Goal: ...
-                // Functions: ...
-                Console.WriteLine(e.Message);
+                var errorDetails = e.InnerException?.Message;
+                var promptDetails = e.CreatePlanPrompt;
+                var modelResults = e?.ModelResults?.Content; // Proposed plan
+                Console.WriteLine($"Error: {errorDetails}\n Prompt: {promptDetails}\n ModelResults: {modelResults}");
             }
 
             Console.WriteLine("\n\nDo you want to continue? (Y/N)");
