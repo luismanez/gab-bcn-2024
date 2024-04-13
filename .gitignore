@@ -396,3 +396,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+src/CozyKitchen/hostsettings.json
+src/.DS_Store
+src/CozyKitchen/.DS_Store
+.DS_Store
