@@ -12,16 +12,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="1.10.3" />
+    <PackageReference Include="Azure.Identity" Version="1.11.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
     <PackageReference Include="Microsoft.Graph.Beta" Version="5.65.0-preview" />
-    <PackageReference Include="Microsoft.SemanticKernel" Version="1.6.3" />
-    <PackageReference Include="Microsoft.SemanticKernel.Yaml" Version="1.6.3" />
-    <PackageReference Include="Microsoft.SemanticKernel.Planners.Handlebars" Version="1.6.3-preview" />
-    <PackageReference Include="Microsoft.SemanticKernel.Experimental.Agents" Version="1.6.3-alpha" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.7.1" />
+    <PackageReference Include="Microsoft.SemanticKernel.Yaml" Version="1.7.1" />
+    <PackageReference Include="Microsoft.SemanticKernel.Planners.Handlebars" Version="1.7.1-preview" />
+    <PackageReference Include="Microsoft.SemanticKernel.Experimental.Agents" Version="1.7.1-alpha" />
   </ItemGroup>
 
   <ItemGroup>
